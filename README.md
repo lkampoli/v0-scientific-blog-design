@@ -2,6 +2,8 @@
 
 A modern, space-themed scientific blog focused on computational fluid dynamics, numerical methods, hypersonics, and space exploration technologies.
 
+**Live Demo**: https://lkampoli.github.io/scientific-blog
+
 ## Features
 
 - **Space/CFD Theme**: Dark aesthetic with cyan and orange accents inspired by hypersonic flow visualization
@@ -30,8 +32,8 @@ npx shadcn-cli@latest init -d
 
 2. **Or clone and install manually**:
 \`\`\`bash
-git clone <repository>
-cd scientific-blog
+git clone https://github.com/lkampoli/v0-scientific-blog-design.git
+cd v0-scientific-blog-design
 npm install
 npm run dev
 \`\`\`
@@ -43,9 +45,9 @@ Update `lib/config.ts` with your details:
 \`\`\`typescript
 export const siteConfig = {
   siteName: 'CFD & Hypersonics Blog',
-  siteUrl: 'https://yourdomain.com',
+  siteUrl: 'https://lkampoli.github.io/scientific-blog',
   social: {
-    github: 'https://github.com/yourprofile',
+    github: 'https://github.com/lkampoli',
     linkedin: 'https://linkedin.com/in/yourprofile',
     twitter: 'https://x.com/yourhandle',
     // ... add more social links
@@ -73,6 +75,7 @@ git push origin main
 
 3. **GitHub Action Deployment**:
    - The workflow in `.github/workflows/deploy.yml` automatically builds and deploys on push
+   - Your blog goes live at: https://lkampoli.github.io/scientific-blog
 
 4. **Update next.config.mjs**:
    - Change `basePath: '/your-repo-name'` if using project pages
@@ -247,40 +250,8 @@ MIT License - feel free to use for your scientific blog
 
 ## Support & Contributions
 
-For issues, feature requests, or contributions, please open an issue on GitHub.
+For issues, feature requests, or contributions, please open an issue on GitHub: https://github.com/lkampoli/v0-scientific-blog-design
 
 ---
 
 Built with passion for CFD researchers, engineers, and space enthusiasts.
-\`\`\`
-
-\`\`\`env.example file=".env.example"
-# Site Configuration
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
-NEXT_PUBLIC_SITE_NAME=CFD & Hypersonics Blog
-
-# Newsletter Integration
-NEXT_PUBLIC_NEWSLETTER_PROVIDER=substack
-NEWSLETTER_API_ENDPOINT=https://yourname.substack.com/api/v1/subscribe
-
-# Analytics
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
-
-# Ads
-NEXT_PUBLIC_GOOGLE_ADSENSE_ID=ca-pub-xxxxxxxxxxxxxxxx
-
-# Comments
-NEXT_PUBLIC_DISQUS_SHORTNAME=your-disqus-shortname
-
-# Email (for contact form)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASSWORD=your-app-password
-
-# Social Media URLs
-NEXT_PUBLIC_GITHUB_URL=https://github.com/yourprofile
-NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/yourprofile
-NEXT_PUBLIC_TWITTER_URL=https://x.com/yourhandle
-NEXT_PUBLIC_INSTAGRAM_URL=https://instagram.com/yourprofile
-NEXT_PUBLIC_YOUTUBE_URL=https://youtube.com/@yourchannel

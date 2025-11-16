@@ -4,12 +4,15 @@
 
 ### Step 1: Create GitHub Repository
 
+The repository has been initialized at: `https://github.com/lkampoli/v0-scientific-blog-design`
+
+If deploying to your own repository:
 \`\`\`bash
 git init
 git add .
 git commit -m "Initial commit: Scientific blog"
 git branch -M main
-git remote add origin https://github.com/username/scientific-blog.git
+git remote add origin https://github.com/lkampoli/your-repo-name.git
 git push -u origin main
 \`\`\`
 
@@ -24,10 +27,10 @@ git push -u origin main
 Edit `next.config.mjs`:
 
 \`\`\`javascript
-// For user/org pages (yourusername.github.io)
+// For user/org pages (lkampoli.github.io)
 // Remove or comment out basePath
 
-// For project pages (yourusername.github.io/scientific-blog)
+// For project pages (lkampoli.github.io/scientific-blog)
 basePath: '/scientific-blog',
 assetPrefix: '/scientific-blog',
 \`\`\`
@@ -42,22 +45,22 @@ git push origin main
 The GitHub Action will automatically build and deploy. Check Actions tab for status.
 
 Your site will be live at:
-- `https://yourusername.github.io/scientific-blog` (project pages)
-- `https://yourusername.github.io` (user/org pages)
+- \`https://lkampoli.github.io/scientific-blog\` (current project pages)
+- \`https://lkampoli.github.io\` (user pages - if using user/org pages setup)
 
 ## Custom Domain Setup
 
 ### Using GitHub Pages with Custom Domain
 
 1. **Update Configuration**:
-   - Remove `basePath` from `next.config.mjs`
-   - Update `.github/workflows/deploy.yml` CNAME section
+   - Remove \`basePath\` from \`next.config.mjs\`
+   - Update \`.github/workflows/deploy.yml\` CNAME section
 
 2. **Add DNS Records** (depends on registrar):
    
    For CNAME (subdomain):
    \`\`\`
-   CNAME  blog  yourusername.github.io
+   CNAME  blog  lkampoli.github.io
    \`\`\`
    
    For Apex Domain:
@@ -73,8 +76,8 @@ Your site will be live at:
    - Enter your domain name
 
 4. **Update Site Config**:
-   - `lib/config.ts`: Update `siteUrl`
-   - `.env`: Update `NEXT_PUBLIC_SITE_URL`
+   - \`lib/config.ts\`: Update \`siteUrl\`
+   - \`.env\`: Update \`NEXT_PUBLIC_SITE_URL\`
 
 ## Vercel Deployment
 
@@ -94,10 +97,10 @@ netlify deploy --prod
 
 ## Environmental Variables
 
-Create `.env.local` with:
+Create \`.env.local\` with:
 
 \`\`\`
-NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+NEXT_PUBLIC_SITE_URL=https://lkampoli.github.io/scientific-blog
 NEXT_PUBLIC_NEWSLETTER_PROVIDER=substack
 NEWSLETTER_API_ENDPOINT=https://yourname.substack.com/api/v1/subscribe
 \`\`\`
@@ -122,17 +125,17 @@ Test the production build before deploying.
 
 ### Styles not loading
 
-- Check `assetPrefix` is set correctly
+- Check \`assetPrefix\` is set correctly
 - Clear browser cache
-- Verify CSS is built in `.next/` or `out/`
+- Verify CSS is built in \`.next/\` or \`out/\`
 
 ### Images not displaying
 
-- Use relative paths: `/image.jpg`
-- Ensure images are in `public/` folder
-- For GitHub Pages, include `basePath`: `/placeholder.svg?key=unique`
+- Use relative paths: \`/image.jpg\`
+- Ensure images are in \`public/\` folder
+- For GitHub Pages, include \`basePath\`: \`/placeholder.svg?key=unique\`
 
 ### 404 errors
 
-- Check `trailingSlash: true` in config
+- Check \`trailingSlash: true\` in config
 - Verify routing paths match file structure

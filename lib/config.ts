@@ -7,11 +7,11 @@ export const siteConfig = {
   // Site metadata
   siteName: 'CFD & Hypersonics Blog',
   siteDescription: 'Deep dive into computational fluid dynamics, numerical methods, hypersonics, and space exploration',
-  siteUrl: 'https://yoursite.com',
+  siteUrl: 'https://lkampoli.github.io/scientific-blog',
   
   // Social media
   social: {
-    github: 'https://github.com/yourprofile',
+    github: 'https://github.com/lkampoli',
     linkedin: 'https://linkedin.com/in/yourprofile',
     twitter: 'https://x.com/yourhandle',
     instagram: 'https://instagram.com/yourprofile',
