@@ -6,8 +6,8 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  basePath: '/scientific-blog',
-  assetPrefix: '/scientific-blog',
+  basePath: 'lkampoli.github.io/scientific-blog',
+  assetPrefix: 'lkampoli.github.io/scientific-blog',
 
   trailingSlash: true,
 
