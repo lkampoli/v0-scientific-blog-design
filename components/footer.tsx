@@ -25,7 +25,7 @@ export default function Footer() {
         {/* Social Links */}
         <div className="mb-12">
           <h3 className="text-lg font-semibold mb-6">Connect With Me</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3">
+          <div className="flex flex-wrap gap-2">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
@@ -33,9 +33,11 @@ export default function Footer() {
                 title={link.name}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="aspect-square flex items-center justify-center border border-border rounded-lg hover:border-secondary hover:bg-secondary/10 transition-all group"
+                className="w-6 h-6 flex items-center justify-center text-muted-foreground hover:text-secondary transition-colors"
               >
-                <span className="text-xs font-semibold group-hover:text-secondary transition-colors">{link.name}</span>
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.2" />
+                </svg>
               </a>
             ))}
           </div>

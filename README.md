@@ -254,7 +254,7 @@ For issues, feature requests, or contributions, please open an issue on GitHub.
 Built with passion for CFD researchers, engineers, and space enthusiasts.
 \`\`\`
 
-```env.example file=".env.example"
+\`\`\`env.example file=".env.example"
 # Site Configuration
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com
 NEXT_PUBLIC_SITE_NAME=CFD & Hypersonics Blog
